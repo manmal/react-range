@@ -224,7 +224,8 @@ class Range extends React.Component<IProps> {
 
   addTouchEvents = (e: TouchEvent) => {
     document.addEventListener('touchmove', this.schdOnTouchMove, {
-      passive: false
+      passive: false,
+      capture: true
     });
     document.addEventListener('touchend', this.schdOnEnd, {
       passive: false
